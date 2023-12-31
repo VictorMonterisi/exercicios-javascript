@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XP Level of Your Hero</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <main class="container">
+        <video autoplay muted loop id="bg">
+            <source src="assets/bg/bg.mp4" type="video/mp4">
+        </video>
+        <div class="xp-level">
+            <h1>What's Your XP Level?</h1>
+            <input type="range" id="level-range" oninput="feedback_badge(this.value)" min="0" max="10001" value="0">
+            <p id="level-number">0 XP</p>
+            <div id="level-badge">
+                <p class='ferro'>Iron</p>
+            </div>
+        </div>
+    </main>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+:root {
+    --white: #f9f9f9;
+    --black: #1f1f1f;
+
+    --pink: #fd00ff;
+    --blue: #00adff;
+
+    --ferro: #848484; /* Um tom de cinza escuro */
+    --bronze: #cd7f32; /* Uma tonalidade de bronze comum */
+    --prata: #c0c0c0; /* Prata clássica */
+    --ouro: #ffd700; /* Cor dourada */
+    --platina: #e5e4e2; /* Tonalidade neutra de platina */
+    --ascendente: #4caf50; /* Verde para representar crescimento e ascensão */
+    --imortal: #ff69b4; /* Rosa brilhante para algo excepcional e duradouro */
+    --radiante: #ff4500; /* Laranja intenso para refletir algo extraordinário */
+}
+  
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+body {
+    font-family: Verdana, sans-serif;
+	font-size: 62.5%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+#bg {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.xp-level {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 20px 25px;
+    text-align: center;
+}
+
+.xp-level h1 {
+    font-size: 3em;
+    color: var(--white);
+    margin: 0 0 14px 0;
+}
+
+#level-range {
+    margin: 7px 0;
+    -webkit-appearance: none;
+    appearance: none; 
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+    border-radius: 16px;
+}
+  
+  #level-range::-webkit-slider-runnable-track {
+    height: 15px;
+    background: var(--white);
+    border-radius: 16px;
+}
+  
+  #level-range::-moz-range-track {
+    height: 15px;
+    background: var(--white);
+    border-radius: 16px;
+}
+  
+  #level-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none; 
+    height: 15px;
+    width: 15px;
+    background-color: var(--white);
+    border-radius: 50%;
+    border: 2px solid var(--blue);
+    box-shadow: -407px 0 0 400px var(--blue);
+}
+  
+  #level-range::-moz-range-thumb {
+    height: 15px;
+    width: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 1px solid var(--blue);
+    box-shadow: -407px 0 0 400px var(--blue);
+}
+
+#level-number {
+    font-size: 2.5em;
+    color: var(--white);
+    margin: 7px 0 14px 0;
+}
+
+.ferro,
+.bronze,
+.prata,
+.ouro,
+.platina,
+.ascendente,
+.imortal,
+.radiante {
+    font-size: 2em;
+    border-radius: 24px;
+    padding: 10px;
+}
+
+.ferro {
+    background-color: var(--ferro);
+}
+.bronze {
+    background-color: var(--bronze);
+}
+.prata {
+    background-color: var(--prata);
+}
+.ouro {
+    background-color: var(--ouro);
+}
+.platina {
+    background-color: var(--platina);
+}
+.ascendente {
+    background-color: var(--ascendente);
+}
+.imortal {
+    background-color: var(--imortal);
+}
+.radiante {
+    background-color: var(--radiante);
+}
