@@ -1,18 +1,20 @@
 :root {
     --white: #f9f9f9;
-    --black: #1f1f1f;
+    --white-transparent: rgba(255,255,255,0.3);
+    --white-transparant-input: rgba(255 255 255,0.5) ;
+    --black: #121212;
 
     --pink: #fd00ff;
     --blue: #00adff;
 
-    --ferro: #848484; /* Um tom de cinza escuro */
-    --bronze: #cd7f32; /* Uma tonalidade de bronze comum */
-    --prata: #c0c0c0; /* Prata clássica */
-    --ouro: #ffd700; /* Cor dourada */
-    --platina: #e5e4e2; /* Tonalidade neutra de platina */
-    --ascendente: #4caf50; /* Verde para representar crescimento e ascensão */
-    --imortal: #ff69b4; /* Rosa brilhante para algo excepcional e duradouro */
-    --radiante: #ff4500; /* Laranja intenso para refletir algo extraordinário */
+    --iron: #848484;
+    --bronze: #cd7f32;
+    --silver: #c0c0c0;
+    --gold: #ffd700;
+    --platinum: #e5e4e2;
+    --ascendent: #4caf50;
+    --immortal: #ff69b4;
+    --radiant: #ff4500;
 }
   
 
@@ -26,6 +28,7 @@
 body {
     font-family: Verdana, sans-serif;
 	font-size: 62.5%;
+    background: var(--black);
 }
 
 .container {
@@ -37,113 +40,61 @@ body {
     width: 100%;
 }
 
-#bg {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
+#match-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: var(--white-transparent);
+    border-radius: 5px;
+    backdrop-filter: blur(10px);
+    padding: 15px 20px;
 }
 
-.xp-level {
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(3px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 20px 25px;
+#match-data label,
+#match-data input {
+    font-size: 2em;
+    margin: 7px auto;
     text-align: center;
 }
 
-.xp-level h1 {
-    font-size: 3em;
-    color: var(--white);
-    margin: 0 0 14px 0;
+#match-data label {
+    font-weight: bold;
 }
 
-#level-range {
-    margin: 7px 0;
-    -webkit-appearance: none;
-    appearance: none; 
-    width: 100%;
+#match-data input {
+    background: var(--white-transparant-input);
+    border: 1px solid var(--white);
+    border-radius: 5px;
+    color: var(--black);
+}
+
+#match-data input::placeholder {
+    color: var(--black);
+}
+
+#match-data button {
+    background: var(--blue);
+    color: var(--black);
+    font-weight: bold;
     cursor: pointer;
-    outline: none;
-    overflow: hidden;
-    border-radius: 16px;
-}
-  
-  #level-range::-webkit-slider-runnable-track {
-    height: 15px;
-    background: var(--white);
-    border-radius: 16px;
-}
-  
-  #level-range::-moz-range-track {
-    height: 15px;
-    background: var(--white);
-    border-radius: 16px;
-}
-  
-  #level-range::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none; 
-    height: 15px;
-    width: 15px;
-    background-color: var(--white);
-    border-radius: 50%;
-    border: 2px solid var(--blue);
-    box-shadow: -407px 0 0 400px var(--blue);
-}
-  
-  #level-range::-moz-range-thumb {
-    height: 15px;
-    width: 15px;
-    background-color: #fff;
-    border-radius: 50%;
-    border: 1px solid var(--blue);
-    box-shadow: -407px 0 0 400px var(--blue);
+    font-size: 1.5em;
+    padding: 5px 7px;
+    box-shadow: unset;
+    border: unset;
+    border-radius: 5px;
+    margin-top: 15px;
 }
 
-#level-number {
-    font-size: 2.5em;
+#match-data button:hover {
+    opacity: 0.8;
+}
+
+#output h1 {
+    background: var(--black);
+    border: 1px solid var(--white);
+    border-radius: 5px;
+    padding: 15px;
     color: var(--white);
-    margin: 7px 0 14px 0;
-}
-
-.ferro,
-.bronze,
-.prata,
-.ouro,
-.platina,
-.ascendente,
-.imortal,
-.radiante {
-    font-size: 2em;
-    border-radius: 24px;
-    padding: 10px;
-}
-
-.ferro {
-    background-color: var(--ferro);
-}
-.bronze {
-    background-color: var(--bronze);
-}
-.prata {
-    background-color: var(--prata);
-}
-.ouro {
-    background-color: var(--ouro);
-}
-.platina {
-    background-color: var(--platina);
-}
-.ascendente {
-    background-color: var(--ascendente);
-}
-.imortal {
-    background-color: var(--imortal);
-}
-.radiante {
-    background-color: var(--radiante);
+    margin: 15px auto 0 auto;
 }

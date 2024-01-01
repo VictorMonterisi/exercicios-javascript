@@ -1,30 +1,26 @@
-function feedback_badge(value) {
-    let level_badge = document.querySelector("#level-badge");
-    let level_number = document.querySelector("#level-number");
+function calculate() {
+    let wins = document.querySelector("#wins").value;
+    let loses = document.querySelector("#loses").value;
+    let output = document.querySelector("#output");
 
-    if (value <= 1000) {
-        level_number.innerHTML = value;
-        level_badge.innerHTML = "<p class='ferro'>Iron</p>";
-    } else if (value >= 1001 && value <= 2000) {
-        level_number.innerHTML = value;
-        level_badge.innerHTML = "<p class='bronze'>Bronze</p>";
-    } else if (value >= 2001 && value <= 5000) {
-        level_number.innerHTML = value;
-        level_badge.innerHTML = "<p class='prata'>Silver</p>";
-    } else if (value >= 5001 && value <= 7000) {
-        level_number.innerHTML = value;
-        level_badge.innerHTML = "<p class='ouro'>Gold</p>";
-    } else if (value >= 7001 && value <= 8000) {
-        level_number.innerHTML = value;
-        level_badge.innerHTML = "<p class='platina'>Platinum</p>";
-    } else if (value >= 8001 && value <= 9000) {
-        level_number.innerHTML = value;
-        level_badge.innerHTML = "<p class='ascendente'>Ascendent</p>";
-    } else if (value >= 9001 && value <= 10000) {
-        level_number.innerHTML = value;
-        level_badge.innerHTML = "<p class='imortal'>Immortal</p>";
-    } else if (value > 10000) {
-        level_number.innerHTML = value;
-        level_badge.innerHTML = "<p class='radiante'>Radiant</p>";
+    let victories = wins - loses;
+
+    if (victories < 10) {
+        result = "iron";
+    } else if (victories >= 11 && victories <= 20) {
+        result = "bronze";
+    } else if (victories >= 21 && victories <= 50) {
+        result = "silver";
+    } else if (victories >= 51 && victories <= 80) {
+        result = "gold";
+    } else if (victories >= 81 && victories <= 90) {
+        result = "diamond";
+    } else if (victories >= 91 && victories <= 100) {
+        result = "legendary";
+    } else if (victories >= 101) {
+        result = "immortal";
+    } else {
+        alert("ERROR: Try Again!");
     }
+    output.innerHTML = `<h1>The hero has ${victories} victories and your rank is <span style ="color: var(--${result});">${result}!</h1>`;
 }

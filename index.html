@@ -3,21 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XP Level of Your Hero</title>
+    <title>Rank Calculator</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <main class="container">
-        <video autoplay muted loop id="bg">
-            <source src="assets/bg/bg.mp4" type="video/mp4">
-        </video>
-        <div class="xp-level">
-            <h1>What's Your XP Level?</h1>
-            <input type="range" id="level-range" oninput="feedback_badge(this.value)" min="0" max="10001" value="0">
-            <p id="level-number">0 XP</p>
-            <div id="level-badge">
-                <p class='ferro'>Iron</p>
-            </div>
+        <div id="match-data">
+            <label for="wins">Wins</label>
+            <input type="number" name="wins" id="wins" placeholder="0">
+            <label for="loses">Loses</label>
+            <input type="number" name="loses" id="loses" placeholder="0">
+            <button onclick="calculate()">Calculate</button>
+        </div>
+        <div id="output">
+            
         </div>
     </main>
     <script src="assets/js/script.js"></script>
